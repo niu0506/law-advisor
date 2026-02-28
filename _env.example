@@ -1,0 +1,40 @@
+# ===== LLM 提供商选择 =====
+# 可选: openai | qianwen | deepseek | zhipu | ollama | custom
+LLM_PROVIDER=ollama
+OLLAMA_MODEL=qwen2.5:7b
+OLLAMA_BASE_URL=http://localhost:11434
+
+# LLM_PROVIDER=openai
+# OPENAI_API_KEY=sk-xxx
+# OPENAI_MODEL=gpt-4o-mini
+
+# LLM_PROVIDER=qianwen
+# QIANWEN_API_KEY=sk-xxx
+
+# LLM_PROVIDER=deepseek
+# DEEPSEEK_API_KEY=sk-xxx
+
+# LLM_PROVIDER=custom
+# CUSTOM_API_KEY=sk-xxx
+# CUSTOM_BASE_URL=https://your-api.com/v1
+# CUSTOM_MODEL=your-model
+
+# ===== 嵌入与检索 =====
+EMBEDDING_MODEL=BAAI/bge-large-zh-v1.5
+EMBEDDING_FORCE_CPU=false      # true = 强制使用 CPU
+
+# ===== Reranker（留空则禁用）=====
+RERANKER_MODEL=BAAI/bge-reranker-base
+RERANKER_TOP_N=3
+
+# ===== RAG 参数 =====
+CHUNK_SIZE=500
+TOP_K=10
+
+# ===== 对话记忆 =====
+MEMORY_WINDOW=6    # 保留最近 N 轮对话；0 = 禁用
+
+# ===== 路径 =====
+# CHROMA_DB_PATH=./chroma_db
+# LAWS_DIR=./data/laws
+# HISTORY_DB_PATH=./history.db
